@@ -1,16 +1,57 @@
-# React + Vite
+# Inagata Intern Challenge - Frontend Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Halo! 👋 Selamat datang di repositori proyek tantangan magang saya untuk posisi **Frontend Developer** di **Inagata**. Proyek ini berfokus pada slicing dan implementasi *dashboard* interaktif yang responsif, modular, dan bersih menggunakan ekosistem React modern.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Preview Aplikasi
+Belum Kelar
+---
 
-## React Compiler
+## Main Highlight
+* **Modern Tech Stack:** Menggunakan Vite + React + Tailwind CSS untuk performa super ngebut dan styling modular.
+* **Component-Driven Development:** Memecah layout menjadi komponen-komponen kecil yang reusable (bisa dipakai ulang) di folder `src/components/` seperti `BalanceHistory`, `ExpenseStatistics`, `QuickTransfer`, dll.
+* **Pixel Perfect Mindset:** Berusaha menyelaraskan hasil coding sedekat mungkin dengan desain referensi yang diberikan.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the Oxlint configuration
+## Tech Stack & Alat Tempur
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+* **Framework/Bundler:** Vite + React (JSX)
+* **Styling:** Tailwind CSS & PostCSS
+* **Linter/Formatter:** Oxlint (Untuk menjaga kode tetap bersih dan minim error)
+* **Environment:** Kali Linux (Development Sandbox)
+
+---
+
+## Cara Menjalankan Proyek di Lokal
+
+Jika Anda ingin mereview atau menjalankan proyek ini di perangkat lokal Anda, ikuti langkah mudah berikut:
+
+1. **Clone Repositori Ini**
+   ```bash
+   git clone [https://github.com/Fianisme/inagataintern_challenge.git](https://github.com/Fianisme/inagataintern_challenge.git)
+   cd inagataintern_challenge
+
+2. **Install Dependensi**
+    ```bash
+    npm install
+
+3. **Jalankan**
+    ```bash
+    npm run dev
+
+## Struktur Project
+
+├── public/             # Aset publik (ikon, svg, dll.)
+├── src/
+│   ├── assets/         # Gambar & styling dasar
+│   ├── components/     # Komponen modular dashboard (Header, Sidebar, Cards, dll.)
+│   ├── views/          # Halaman utama (Dashboard.jsx)
+│   ├── App.jsx         # Root component
+│   └── main.jsx        # Entry point aplikasi
+├── .gitignore          # Penyaring file build lokal
+├── vite.config.js      # Konfigurasi Vite
+└── package.json        # Daftar modul & script proyek
+
+
