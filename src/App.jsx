@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from './components/Sidebar'; // Sesuaikan dengan nama komponen sidebarmu
-import Header from './components/Header';   // Sesuaikan dengan nama komponen headermu
+import Sidebar from './components/common/Sidebar'; // Sesuaikan dengan nama komponen sidebarmu
+import Header from './components/common/Header';   // Sesuaikan dengan nama komponen headermu
 import Dashboard from './views/Dashboard'; 
 
 export default function App() {

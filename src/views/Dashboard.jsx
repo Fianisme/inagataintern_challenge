@@ -1,10 +1,10 @@
 import React from 'react';
-import Cards from '../components/Cards';
-import RecentTransactions from '../components/RecentTransactions';
-import WeeklyActivity from '../components/WeeklyActivity';
-import ExpenseStatistics from '../components/ExpenseStatistics';
-import QuickTransfer from '../components/QuickTransfer';
-import BalanceHistory from '../components/BalanceHistory';
+import Cards from '../components/overview/Cards';
+import RecentTransactions from '../components/overview/RecentTransactions';
+import WeeklyActivity from '../components/overview/WeeklyActivity';
+import ExpenseStatistics from '../components/overview/ExpenseStatistics';
+import QuickTransfer from '../components/overview/QuickTransfer';
+import BalanceHistory from '../components/overview/BalanceHistory';
 
 export default function Dashboard() {
   return (
