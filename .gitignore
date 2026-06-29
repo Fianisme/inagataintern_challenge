@@ -1,0 +1,7 @@
+node_modules
+dist
+dist-ssr
+*.local
+.aider.chat.history.md
+.aider*
+gravity/
