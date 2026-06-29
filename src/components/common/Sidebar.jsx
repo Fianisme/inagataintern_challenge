@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
-function Sidebar() {
-  const [activeMenu, setActiveMenu] = useState('Dashboard');
+function Sidebar({ activeMenu: propActiveMenu, setActiveMenu: propSetActiveMenu }) {
+  const [localActiveMenu, setLocalActiveMenu] = useState('Dashboard');
+
+  const activeMenu = propActiveMenu !== undefined ? propActiveMenu : localActiveMenu;
+  const setActiveMenu = propSetActiveMenu !== undefined ? propSetActiveMenu : setLocalActiveMenu;
 
   const menuItems = [
     {

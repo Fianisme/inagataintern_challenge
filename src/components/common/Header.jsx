@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Header() {
+function Header({ title = 'Overview' }) {
   return (
     <header className="h-24 bg-white border-b border-[#E6EFF5] flex items-center justify-between px-8 z-10">
       {/* Title */}
       <h2 className="text-[28px] font-bold text-[#343C6A] font-sans">
-        Overview
+        {title}
       </h2>
 
       {/* Right Controls */}
