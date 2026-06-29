@@ -9,7 +9,7 @@ export default function ExpenseStatistics() {
           <path 
             d="M 125 125 L 125 25 A 100 100 0 0 1 205.9 183.8 Z" 
             fill="#1814F3" 
-            className="transition-transform duration-200 hover:scale-105 origin-[125px_125px] cursor-pointer"
+            className="transition-transform duration-200 hover:scale-115 origin-[125px_125px] cursor-pointer"
           />
           <text x="165" y="90" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle" className="font-sans">
             35%
@@ -24,7 +24,7 @@ export default function ExpenseStatistics() {
           <path 
             d="M 125 125 L 205.9 183.8 A 100 100 0 0 1 125 225 Z" 
             fill="#FC7900" 
-            className="transition-transform duration-200 hover:scale-105 origin-[125px_125px] cursor-pointer"
+            className="transition-transform duration-200 hover:scale-115 origin-[125px_125px] cursor-pointer"
           />
           <text x="158" y="170" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle" className="font-sans">
             15%
@@ -39,7 +39,7 @@ export default function ExpenseStatistics() {
           <path 
             d="M 125 125 L 125 225 A 100 100 0 0 1 29.9 94.1 Z" 
             fill="#343C6A" 
-            className="transition-transform duration-200 hover:scale-105 origin-[125px_125px] cursor-pointer"
+            className="transition-transform duration-200 hover:scale-115 origin-[125px_125px] cursor-pointer"
           />
           <text x="75" y="155" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle" className="font-sans">
             30%
@@ -54,7 +54,7 @@ export default function ExpenseStatistics() {
           <path 
             d="M 125 125 L 29.9 94.1 A 100 100 0 0 1 125 25 Z" 
             fill="#FA00FF" 
-            className="transition-transform duration-200 hover:scale-105 origin-[125px_125px] cursor-pointer"
+            className="transition-transform duration-200 hover:scale-115 origin-[125px_125px] cursor-pointer"
           />
           <text x="78" y="72" fill="white" fontSize="12" fontWeight="bold" textAnchor="middle" className="font-sans">
             20%
