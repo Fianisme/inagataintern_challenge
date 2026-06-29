@@ -4,4 +4,3 @@ dist-ssr
 *.local
 .aider.chat.history.md
 .aider*
-gravity/
