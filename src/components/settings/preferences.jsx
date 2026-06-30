@@ -145,7 +145,7 @@ export default function Preferences() {
                     }}
                     className={`px-5 py-3 text-[13px] cursor-pointer transition-colors ${
                       preferences.timeZone === tz
-                        ? "bg-[#1814F3]/10 text-[#1814F3] font-medium"
+                        ? "bg-[#0070F3]/10 text-[#1814F3] font-medium"
                         : "text-[#718EBF] hover:bg-[#F4F5F7] hover:text-[#343C6A]"
                     }`}
                   >
