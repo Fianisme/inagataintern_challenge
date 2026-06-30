@@ -49,7 +49,7 @@ function Sidebar({
         {/* Logo Utama Bankku (Aman, Tidak Berubah) */}
         <div className="h-20 tablet:h-24 flex items-center justify-between px-6 tablet:px-8">
           <img
-            src="/images/sidebar/Logo.svg"
+            src="images/sidebar/Logo.svg"
             alt="Bankku Logo"
             className="h-[32px] tablet:h-[36px] w-auto"
           />
@@ -108,8 +108,8 @@ function Sidebar({
                   <img
                     src={
                       isActive
-                        ? `/images/sidebar/Pageshover/${item.iconName}`
-                        : `/images/sidebar/Pages/${item.iconName}`
+                        ? `images/sidebar/Pageshover/${item.iconName}`
+                        : `images/sidebar/Pages/${item.iconName}`
                     }
                     alt={item.name}
                     className="w-5 h-5 object-contain transition-all duration-300 sidebar-icon-hover"

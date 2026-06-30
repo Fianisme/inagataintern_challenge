@@ -40,8 +40,8 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
                 <img
                   src={
                     isDark
-                      ? "/images/cards/Chip_Card_Active.svg"
-                      : "/images/cards/Chip_Card_Passive.svg"
+                      ? "images/cards/Chip_Card_Active.svg"
+                      : "images/cards/Chip_Card_Passive.svg"
                   }
                   alt="Card Chip"
                   className="w-full h-full object-contain"
@@ -129,7 +129,7 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
               Premium Security Card
             </span>
             <img
-              src="/images/sidebar/Logo.svg"
+              src="images/sidebar/Logo.svg"
               alt="Bankku"
               className={`h-3 tablet:h-4 ${isDark ? "brightness-0 invert" : ""}`}
             />
