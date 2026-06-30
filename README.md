@@ -14,7 +14,7 @@ Halo! 👋 Selamat datang di repositori proyek tantangan magang saya untuk posis
 
 ###  Preview Tablet (iPad Pro 11")
 <p align="center">
-  <img width="70%" alt="Tablet Preview" src="https://github.com/user-attachments/assets/4e4b9f63-7897-4bdc-8e8f-37774041124b" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
+  <img width="70%" alt="Tablet Preview" src="https://github.com/user-attachments/assets/5709d5b8-8741-43f3-968c-517ff941fa40" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" />
 </p>
 
 ---
