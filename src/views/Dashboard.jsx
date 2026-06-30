@@ -14,15 +14,15 @@ export default function Dashboard() {
         {/* ================= ROW 1 (Dashboard.jsx) ================= */}
         {/* Left: My Cards */}
         <div className="tablet:col-span-8 space-y-3 tablet:space-y-4">
-          {/* Tetap seperti kode kamu */}
           <div className="flex justify-between items-center">
             <h3 className="text-[18px] tablet:text-[22px] font-bold text-[#343C6A]">
               My Cards
             </h3>
-            <button className="text-[15px] tablet:text-[17px] font-bold text-[#343C6A] hover:text-[#1814F3] transition-colors cursor-pointer">
+            <button className="text-[15px] tablet:text-[17px] desktop:text-[15px] font-semibold text-[#343C6A] hover:text-[#1814F3] transition-colors cursor-pointer">
               See All
             </button>
           </div>
+          {/* Tambahkan id atau penanda flex agar layouting di kanan bisa mendeteksi tinggi aslinya */}
           <div className="flex gap-5 tablet:gap-[30px] overflow-x-auto pb-2 scrollbar-none">
             <div className="min-w-[265px] tablet:min-w-[283px] desktop:flex-1">
               <Cards
@@ -46,18 +46,19 @@ export default function Dashboard() {
         </div>
 
         {/* Right: Recent Transaction */}
-        {/* FIX DI SINI: Hapus flex flex-col, kunci tinggi totalnya di tablet agar pas dengan tinggi kartu */}
-        <div className="tablet:col-span-4 space-y-3 tablet:space-y-4">
+        {/* JURUS PERFECT ALIGNMENT: Tambahkan flex flex-col khusus untuk tablet ke atas */}
+        <div className="tablet:col-span-4 space-y-3 tablet:space-y-4 flex flex-col">
           <h3 className="text-[18px] tablet:text-[22px] font-bold text-[#343C6A]">
             Recent Transaction
           </h3>
-          {/* 
-    DI SINI KUNCINYA: 
-    Di mobile tingginya auto/min-h-230. 
-    Di tablet 1024px, tinggi kartu berkisar di 185px-190px.
-    Di desktop 1440px, tinggi kartu berkisar di 215px-225px.
-  */}
-          <div className="w-full tablet:h-[185px] desktop:h-[225px]">
+
+          {/* SOLUSI ABSOLUT:
+            - Di mobile, biarkan dia fleksibel memakai min-h-[230px] atau bawaan aslinya.
+            - Di tablet & desktop, hilangkan tinggi statis (h-[]). Gunakan flex-1 dibarengi h-0.
+              Ini memaksa box putih RecentTransactions memotong bumbunya sendiri dan 
+              lurus mutlak mengikuti tinggi sejajar dengan Card di sebelah kirinya!
+          */}
+          <div className="w-full min-h-[230px] tablet:min-h-0 tablet:flex-1 tablet:h-0">
             <RecentTransactions />
           </div>
         </div>
