@@ -14,21 +14,21 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
         {/* 1. Baris Atas: Balance & Chip Icon */}
         <div className="flex justify-between items-start">
           <div>
-            <p className={`text-[12px] font-normal ${isDark ? 'text-white/70' : 'text-[#718EBF]'}`}>
+            <p className={`text-[15px] font-normal ${isDark ? 'text-white/70' : 'text-[#718EBF]'}`}>
               Balance
             </p>
-            <p className="text-xl font-semibold mt-1 font-sans">
+            <p className="text-[25px] font-semibold mt-1 font-sans">
               {balance}
             </p>
           </div>
           
           {/* SVG Chip yang Akurat */}
-          <div className="w-[34px] h-[30px] flex items-center justify-center">
+          <div className="w-[54px] h-[50px] flex items-center justify-center">
             {/* ponytail: replaced inline SVG chip with active/passive chip image assets */}
             <img 
               src={isDark ? "/images/cards/Chip_Card_Active.svg" : "/images/cards/Chip_Card_Passive.svg"} 
               alt="Card Chip" 
-              className="w-[34px] h-[30px] object-contain"
+              className="w-[54px] h-[50px] object-contain"
             />
           </div>
         </div>
@@ -36,18 +36,18 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
         {/* 2. Baris Tengah: Card Holder & Valid Thru */}
         <div className="flex gap-14">
           <div>
-            <p className={`text-[10px] font-normal uppercase tracking-wider ${isDark ? 'text-white/70' : 'text-[#718EBF]'}`}>
+            <p className={`text-[14px] font-normal uppercase tracking-wider ${isDark ? 'text-white/70' : 'text-[#718EBF]'}`}>
               Card Holder
             </p>
-            <p className={`text-[13px] font-semibold mt-1 ${isDark ? 'text-white' : 'text-[#343C6A]'}`}>
+            <p className={`text-[18px] font-semibold mt-1 ${isDark ? 'text-white' : 'text-[#343C6A]'}`}>
               {cardHolder}
             </p>
           </div>
           <div>
-            <p className={`text-[10px] font-normal uppercase tracking-wider ${isDark ? 'text-white/70' : 'text-[#718EBF]'}`}>
+            <p className={`text-[14px] font-normal uppercase tracking-wider ${isDark ? 'text-white/70' : 'text-[#718EBF]'}`}>
               Valid Thru
             </p>
-            <p className={`text-[13px] font-semibold mt-1 ${isDark ? 'text-white' : 'text-[#343C6A]'}`}>
+            <p className={`text-[18px] font-semibold mt-1 ${isDark ? 'text-white' : 'text-[#343C6A]'}`}>
               {validThru}
             </p>
           </div>
@@ -68,7 +68,7 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
         {/* Lingkaran Logo Overlapping */}
         <div className="flex -space-x-5 items-center">
           <div className={`w-[45px] h-[45px] rounded-full ${isDark ? 'bg-white/50' : 'bg-[#9199AF]/50'}`}></div>
-          <div className={`w-[45px] h-[45px] rounded-full ${isDark ? 'bg-white/20' : 'bg-[#9199AF]/20'}`}></div>
+          <div className={`w-[45px] h-[45px] rounded-full ${isDark ? 'bg-white/50' : 'bg-[#9199AF]/50'}`}></div>
         </div>
       </div>
 

@@ -3,6 +3,7 @@ import Sidebar from './components/common/Sidebar'; // Sesuaikan dengan nama komp
 import Header from './components/common/Header';   // Sesuaikan dengan nama komponen headermu
 import Dashboard from './views/Dashboard'; 
 import Loans from './views/Loans';
+import Settings from './views/Settings';
 
 export default function App() {
   const [activeMenu, setActiveMenu] = useState('Dashboard');
@@ -26,6 +27,8 @@ export default function App() {
         return <Dashboard />;
       case 'Loans':
         return <Loans />;
+      case 'Setting':
+        return <Settings />;
       default:
         // Fallback or placeholder for other views
         return (
