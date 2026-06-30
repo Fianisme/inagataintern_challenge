@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function RecentTransactions() {
   const transactions = [
@@ -10,10 +10,20 @@ function RecentTransactions() {
       iconBg: "bg-[#FFF5D9]",
       iconColor: "text-[#FFBB38]",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+          />
         </svg>
-      )
+      ),
     },
     {
       id: 2,
@@ -26,7 +36,7 @@ function RecentTransactions() {
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
           <path d="M7 21h3.4a1 1 0 001-.8L13 10h3.5c2.5 0 4.5-2 4.5-4.5S19 1 16.5 1H6a1 1 0 00-1 1l-3 18a1 1 0 001 1h4zm1-18h8.5C18 3 19 4 19 5.5S18 8 16.5 8H12a1 1 0 00-1 .8L9.5 17H7.8L9.8 5H8z" />
         </svg>
-      )
+      ),
     },
     {
       id: 3,
@@ -36,34 +46,57 @@ function RecentTransactions() {
       iconBg: "bg-[#DCFCE7]",
       iconColor: "text-[#16DBCC]",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
         </svg>
-      )
+      ),
     },
   ];
 
   return (
-    <div className="bg-white p-6 rounded-[25px] border border-[#DFEAF2] h-[270px] flex flex-col justify-between shadow-xs">
-      <div className="space-y-[15px] overflow-y-auto pr-1 scrollbar-thin">
+    // Bagian terluar box putih memakan tinggi penuh dari Dashboard (h-full)
+    // Berikan flex flex-col dan p-4 atau p-5 (sedikit dikurangi dari p-6 agar muat banyak di tablet)
+    <div className="bg-white p-4 desktop:p-6 rounded-[25px] border border-[#DFEAF2] w-full h-full flex flex-col shadow-xs overflow-hidden">
+      {/* FIX UTAMA: Bungkus list transaksi dengan h-full dan overflow-y-auto */}
+      <div className="space-y-[12px] desktop:space-y-[15px] overflow-y-auto pr-1 scrollbar-thin h-full">
         {transactions.map((item) => (
-          <div key={item.id} className="flex items-center justify-between hover:bg-[#F5F7FA]/40 p-1.5 rounded-xl transition-all duration-200">
+          <div
+            key={item.id}
+            className="flex items-center justify-between hover:bg-[#F5F7FA]/40 p-1 rounded-xl transition-all duration-200"
+          >
             {/* Left: Icon & Text */}
-            <div className="flex items-center gap-4.5">
-              <div className={`w-[50px] h-[50px] ${item.iconBg} ${item.iconColor} rounded-full flex items-center justify-center`}>
+            <div className="flex items-center gap-3 desktop:gap-4.5">
+              <div
+                className={`w-[40px] h-[40px] desktop:w-[50px] desktop:h-[50px] flex-shrink-0 ${item.iconBg} ${item.iconColor} rounded-full flex items-center justify-center`}
+              >
                 {item.icon}
               </div>
               <div className="text-left">
-                <h4 className="font-semibold text-[15px] text-[#343C6A]">{item.title}</h4>
-                <p className="text-[12px] text-[#718EBF] mt-0.5">{item.date}</p>
+                <h4 className="font-semibold text-[14px] desktop:text-[15px] text-[#343C6A] line-clamp-1">
+                  {item.title}
+                </h4>
+                <p className="text-[11px] desktop:text-[12px] text-[#718EBF] mt-0.5">
+                  {item.date}
+                </p>
               </div>
             </div>
             {/* Right: Amount */}
-            <span className={`font-bold text-[16px] ${item.amount < 0 ? 'text-[#FF4B4A]' : 'text-[#41D4A8]'}`}>
-              {item.amount < 0 
-                ? `-$${Math.abs(item.amount)}` 
-                : `+$${item.amount.toLocaleString()}`
-              }
+            <span
+              className={`font-bold text-[14px] desktop:text-[16px] flex-shrink-0 ${item.amount < 0 ? "text-[#FF4B4A]" : "text-[#41D4A8]"}`}
+            >
+              {item.amount < 0
+                ? `-$${Math.abs(item.amount)}`
+                : `+$${item.amount.toLocaleString()}`}
             </span>
           </div>
         ))}

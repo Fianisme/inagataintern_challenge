@@ -1,94 +1,102 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-function Sidebar({
-  activeMenu: propActiveMenu,
-  setActiveMenu: propSetActiveMenu,
-}) {
-  const [localActiveMenu, setLocalActiveMenu] = useState("Dashboard");
+function Sidebar({ activeMenu: propActiveMenu, setActiveMenu: propSetActiveMenu, sidebarOpen, setSidebarOpen }) {
+  const [localActiveMenu, setLocalActiveMenu] = useState('Dashboard');
 
-  const activeMenu =
-    propActiveMenu !== undefined ? propActiveMenu : localActiveMenu;
-  const setActiveMenu =
-    propSetActiveMenu !== undefined ? propSetActiveMenu : setLocalActiveMenu;
+  const activeMenu    = propActiveMenu    !== undefined ? propActiveMenu    : localActiveMenu;
+  const setActiveMenu = propSetActiveMenu !== undefined ? propSetActiveMenu : setLocalActiveMenu;
 
-  // Definisi menu items dengan nama dan ikon masing-masing
   const menuItems = [
-    { name: "Dashboard", iconName: "dashboard.svg" },
-    { name: "Transactions", iconName: "transaction.svg" },
-    { name: "Accounts", iconName: "account.svg" },
-    { name: "Investments", iconName: "Investments.svg" },
-    { name: "Credit Cards", iconName: "CreditCards.svg" },
-    { name: "Loans", iconName: "loans.svg" },
-    { name: "Services", iconName: "Services.svg" },
-    { name: "My Privileges", iconName: "Privileges.svg" },
-    { name: "Setting", iconName: "settings.svg" },
+    { name: 'Dashboard',    iconName: 'dashboard.svg'   },
+    { name: 'Transactions', iconName: 'transaction.svg' },
+    { name: 'Accounts',     iconName: 'account.svg'     },
+    { name: 'Investments',  iconName: 'Investments.svg' },
+    { name: 'Credit Cards', iconName: 'CreditCards.svg' },
+    { name: 'Loans',        iconName: 'loans.svg'       },
+    { name: 'Services',     iconName: 'Services.svg'    },
+    { name: 'My Privileges',iconName: 'Privileges.svg'  },
+    { name: 'Setting',      iconName: 'settings.svg'    },
   ];
 
   const activeIndex = menuItems.findIndex((item) => item.name === activeMenu);
 
   return (
-    <aside className="w-[250px] min-w-[250px] h-screen bg-white border-r border-[#E6EFF5] flex flex-col z-20 transition-all duration-300">
-      {/* Brand Header */}
-      <div className="h-24 flex items-center px-8">
-        {/* Logo */}
-        <img
-          src="/images/sidebar/Logo.svg"
-          alt="Bankku Logo"
-          className="h-[36px] w-auto"
+    <>
+      {/* Backdrop — mobile drawer overlay */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-30 tablet:hidden transition-opacity duration-300"
+          onClick={() => setSidebarOpen(false)}
         />
-      </div>
+      )}
 
-      {/* Menu List */}
-      <nav className="flex-1 py-4 flex flex-col gap-1 overflow-y-auto relative">
-        {/* Active Menu Indicator */}
-        {activeIndex !== -1 && (
-          <div
-            className="absolute left-0 top-0 w-[6px] bg-[#1814F3] rounded-r-md transition-transform duration-300 ease-in-out pointer-events-none"
-            style={{
-              height: "56px",
-              transform: `translateY(${activeIndex * 60 + 16}px)`,
-            }}
-          />
-        )}
+      {/* Sidebar */}
+      <aside className={`
+        fixed tablet:static top-0 bottom-0 left-0 z-40
+        w-[250px] min-w-[250px] h-screen bg-white border-r border-[#E6EFF5] flex flex-col
+        transition-transform duration-300 ease-in-out tablet:translate-x-0
+        ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+      `}>
+        {/* Logo */}
+        <div className="h-20 tablet:h-24 flex items-center justify-between px-6 tablet:px-8">
+          <img src="/images/sidebar/Logo.svg" alt="Bankku Logo" className="h-[32px] tablet:h-[36px] w-auto" />
+          <button
+            className="tablet:hidden text-[#B1B1B1] hover:text-[#343C6A] cursor-pointer"
+            onClick={() => setSidebarOpen(false)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
 
-        {menuItems.map((item) => {
-          const isActive = activeMenu === item.name;
-          return (
+        {/* Menu */}
+        <nav className="flex-1 py-4 flex flex-col gap-1 overflow-y-auto relative">
+          {/* Sliding active indicator */}
+          {activeIndex !== -1 && (
             <div
-              key={item.name}
-              onClick={() => setActiveMenu(item.name)}
-              className={`group flex items-center gap-4 h-[56px] px-8 cursor-pointer relative transition-all duration-200 ${
-                isActive
-                  ? "text-[#1814F3]"
-                  : "text-[#B1B1B1] hover:text-[#343C6A]"
-              }`}
-            >
-              {/* Icon */}
-              <div
-                className={`transition-transform duration-300 ${isActive ? "scale-110" : "group-hover:scale-105"}`}
-              >
-                <img
-                  src={
-                    isActive
-                      ? `/images/sidebar/Pageshover/${item.iconName}`
-                      : `/images/sidebar/Pages/${item.iconName}`
-                  }
-                  alt={item.name}
-                  className={`w-6 h-6 object-contain transition-all duration-300 ${isActive ? "" : "sidebar-icon-hover"}`}
-                />
-              </div>
+              className="absolute left-0 top-0 w-[6px] bg-[#1814F3] rounded-r-md transition-transform duration-300 ease-in-out pointer-events-none"
+              style={{ height: '56px', transform: `translateY(${activeIndex * 60 + 16}px)` }}
+            />
+          )}
 
-              {/* Text */}
-              <span
-                className={`text-[16px] tracking-wide ${isActive ? "font-bold" : "font-medium group-hover:font-semibold"}`}
+          {menuItems.map((item) => {
+            const isActive = activeMenu === item.name;
+            return (
+              <div
+                key={item.name}
+                onClick={() => {
+                  setActiveMenu(item.name);
+                  if (setSidebarOpen) setSidebarOpen(false);
+                }}
+                className={`group flex items-center gap-4 h-[56px] px-8 cursor-pointer relative transition-all duration-200 ${
+                  isActive ? 'text-[#1814F3]' : 'text-[#B1B1B1] hover:text-[#343C6A]'
+                }`}
               >
-                {item.name}
-              </span>
-            </div>
-          );
-        })}
-      </nav>
-    </aside>
+                {/* Hover indicator */}
+                {!isActive && (
+                  <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#1814F3] rounded-r-md transition-transform duration-300 scale-y-0 group-hover:scale-y-50" />
+                )}
+
+                {/* Icon */}
+                <div className={`transition-transform duration-300 ${isActive ? 'scale-110' : 'group-hover:scale-105'}`}>
+                  <img
+                    src={isActive ? `/images/sidebar/Pageshover/${item.iconName}` : `/images/sidebar/Pages/${item.iconName}`}
+                    alt={item.name}
+                    className={`w-6 h-6 object-contain transition-all duration-300 ${isActive ? '' : 'sidebar-icon-hover'}`}
+                  />
+                </div>
+
+                {/* Label */}
+                <span className={`text-[16px] tracking-wide ${isActive ? 'font-bold' : 'font-medium group-hover:font-semibold'}`}>
+                  {item.name}
+                </span>
+              </div>
+            );
+          })}
+        </nav>
+      </aside>
+    </>
   );
 }
 

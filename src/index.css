@@ -5,6 +5,11 @@
   --font-outfit: "Outfit", system-ui, -apple-system, sans-serif;
   --animate-pulse-slow: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
+  /* Breakpoint for responsive design */
+  --breakpoint-mobile: 375px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1440px;
+
   @keyframes pulse-slow {
     0%,
     100% {
@@ -42,13 +47,11 @@ body {
   background: #b1b1b1;
 }
 
-
 .sidebar-icon-hover {
   transition: filter 0.2s ease-in-out;
 }
 
 .group:hover .sidebar-icon-hover {
-
   filter: brightness(0.6);
   transition: filter 0.3s ease;
 }
