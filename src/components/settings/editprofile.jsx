@@ -6,7 +6,7 @@ export default function EditProfile() {
     name: 'Charlene Reed',
     username: 'Charlene Reed',
     email: 'charlenereed@gmail.com',
-    password: '*************', // disarankan dikosongkan/diatur terpisah di backend, tapi ini untuk visual awal
+    password: '*************', // password field bisa diisi dengan placeholder atau masked value
     dob: '25 January 1990',
     presentAddress: 'San Jose, California, USA',
     permanentAddress: 'San Jose, California, USA',
@@ -16,14 +16,14 @@ export default function EditProfile() {
     avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200'
   });
 
-  // 2. Handler fungsi submit (Tinggal dicolok API method POST/PUT sama backend)
+  // 2. Submit form handler
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Data yang siap dikirim ke API backend:', formData);
     alert('Data berhasil disimpan! (Cek console log untuk melihat object data)');
   };
 
-  // 3. Helper function biar kodingan input di bawah gak kepanjangan
+  // 3. Handle input change
   const handleChange = (field, value) => {
     setFormData((prev) => ({
       ...prev,

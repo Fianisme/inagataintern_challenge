@@ -42,13 +42,13 @@ body {
   background: #b1b1b1;
 }
 
-/* ponytail: hover class to make the grey icon look thicker without shifting colors */
+
 .sidebar-icon-hover {
   transition: filter 0.2s ease-in-out;
 }
 
 .group:hover .sidebar-icon-hover {
-  /* Bikin warna ikon sedikit lebih gelap/tegas pas di-hover tanpa merusak piksel */
+
   filter: brightness(0.6);
   transition: filter 0.3s ease;
 }

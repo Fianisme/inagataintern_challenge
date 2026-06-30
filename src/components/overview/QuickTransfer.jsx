@@ -23,7 +23,7 @@ export default function QuickTransfer() {
 
   return (
     <div className="bg-white p-7 rounded-[25px] border border-[#DFEAF2] h-[276px] flex flex-col justify-between shadow-xs">
-      {/* Users Row */}
+      {/* User Display */}
       <div className="flex items-center justify-between px-2">
         <div className="flex-1 flex justify-around items-center">
           {transferUsers.map((user) => (
@@ -41,7 +41,7 @@ export default function QuickTransfer() {
           ))}
         </div>
         
-        {/* Next/Chevron Button */}
+        {/* Transfer Button  */}
         <button className="ml-4 w-[50px] h-[50px] bg-white hover:bg-[#F5F7FA] text-[#718EBF] hover:text-[#343C6A] rounded-full flex items-center justify-center shadow-[0px_4px_12px_rgba(0,0,0,0.05)] border border-[#E6EFF5] transition-all cursor-pointer">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />

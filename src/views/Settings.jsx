@@ -48,7 +48,7 @@ export default function Settings() {
             Security
           </button>
 
-          {/* ELEMEN RAHASIA: Garis bawah tunggal dengan efek Elastic Jelly */}
+          {/* Efek underline animasi page aktif */}
           <span
             className={`absolute bottom-0 h-[3px] bg-[#1814F3] rounded-t-full transition-all duration-500 ${
               activeTab === "edit-profile"
@@ -58,7 +58,7 @@ export default function Settings() {
                   : "left-[256px] w-[66px]"
             }`}
             style={{
-              // Trik sulap: Menggunakan cubic-bezier kustom untuk efek elastis/jelly
+              // efek jelly saat underline pindah tab
               transitionTimingFunction: "cubic-bezier(0.45, -0.5, 0.23, 1.6)",
             }}
           ></span>

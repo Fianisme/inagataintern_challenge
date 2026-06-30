@@ -14,7 +14,7 @@ export default function LoansOverview() {
 
   return (
     <div className="bg-white rounded-[25px] border border-[#DFEAF2] shadow-xs p-6 overflow-x-auto">
-      {/* ponytail: standard native HTML table for responsive alignment and formatting */}
+      {/* Table Header */}
       <table className="w-full text-left border-collapse min-w-[800px]">
         <thead>
           <tr className="border-b border-[#E6EFF5]">

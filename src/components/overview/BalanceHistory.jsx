@@ -3,7 +3,7 @@ import React from 'react';
 export default function BalanceHistory() {
   return (
     <div className="bg-white p-7 rounded-[25px] border border-[#DFEAF2] h-[276px] flex flex-col justify-between shadow-xs">
-      {/* SVG Line Chart */}
+      {/* Balance History Chart Line*/}
       <div className="flex-1 w-full relative">
         <svg className="w-full h-full" viewBox="0 0 650 200" preserveAspectRatio="none">
           <defs>
