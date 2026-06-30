@@ -6,7 +6,8 @@
   --animate-pulse-slow: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
   @keyframes pulse-slow {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 1;
       transform: scale(1);
     }
@@ -19,7 +20,7 @@
 
 body {
   font-family: var(--font-outfit), var(--font-sans);
-  background-color: #F5F7FA;
+  background-color: #f5f7fa;
 }
 
 /* Custom modern scrollbar */
@@ -33,10 +34,21 @@ body {
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: #E6EFF5;
+  background: #e6eff5;
   border-radius: 99px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #B1B1B1;
+  background: #b1b1b1;
+}
+
+/* ponytail: hover class to make the grey icon look thicker without shifting colors */
+.sidebar-icon-hover {
+  transition: filter 0.2s ease-in-out;
+}
+
+.group:hover .sidebar-icon-hover {
+  /* Bikin warna ikon sedikit lebih gelap/tegas pas di-hover tanpa merusak piksel */
+  filter: brightness(0.6);
+  transition: filter 0.3s ease;
 }
