@@ -5,7 +5,11 @@ Halo! 👋 Selamat datang di repositori proyek tantangan magang saya untuk posis
 ---
 
 ## Preview Aplikasi
-Belum Kelar
+Preview Desktop on Chrome Running in Kali Linux
+<img width="717" height="587" alt="Image" src="https://github.com/user-attachments/assets/ee2e7736-5033-476b-989c-90ce7eaf3b7a" />
+
+Preview Tablet Ipad PRO 11
+
 ---
 
 ## Main Highlight
