@@ -20,7 +20,6 @@ export default function Security() {
       twoFactor: !prev.twoFactor,
     }));
   };
-  //   ikon mata untuk intip password
   const [showCurrent, setShowCurrent] = useState(false);
   const [showNew, setShowNew] = useState(false);
 
@@ -76,7 +75,7 @@ export default function Security() {
           </label>
           <div className="relative w-full flex items-center">
             <input
-              type={showCurrent ? "text" : "password"} // Berubah dinamis
+              type={showCurrent ? "text" : "password"}
               placeholder="***********"
               value={securityData.currentPassword}
               onChange={(e) => handleChange("currentPassword", e.target.value)}
@@ -87,11 +86,11 @@ export default function Security() {
               type="button"
               onMouseDown={() => setShowCurrent(true)}
               onMouseUp={() => setShowCurrent(false)}
-              onMouseLeave={() => setShowCurrent(false)} // Mouse leave support untuk mouse yang geser saat intip password
+              onMouseLeave={() => setShowCurrent(false)}
               onTouchStart={(e) => {
                 e.preventDefault();
                 setShowCurrent(true);
-              }} // Support Mobile/Tablet
+              }}
               onTouchEnd={() => setShowCurrent(false)}
               className="absolute right-4 text-[#718EBF] hover:text-[#1814F3] transition-colors cursor-pointer select-none p-1"
             >
@@ -147,7 +146,7 @@ export default function Security() {
               onTouchStart={(e) => {
                 e.preventDefault();
                 setShowNew(true);
-              }} // Support Mobile/Tablet
+              }}
               onTouchEnd={() => setShowNew(false)}
               className="absolute right-4 text-[#718EBF] hover:text-[#1814F3] transition-colors cursor-pointer select-none p-1"
             >
@@ -186,7 +185,7 @@ export default function Security() {
       <div className="flex justify-end mt-4">
         <button
           type="submit"
-          className="w-full md:w-[190px] h-[50px] bg-[#1814F3] hover:bg-blue-800 text-white font-medium text-[16px] rounded-[15px] transition-colors shadow-sm cursor-pointer"
+          className="w-full md:w-[190px] h-[50px] bg-[#1814F3] hover:bg-blue-800 text-white font-medium text-[15px] rounded-[15px] transition-colors shadow-sm cursor-pointer"
         >
           Save
         </button>

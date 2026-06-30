@@ -4,11 +4,6 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    /*
-      Mobile: min-w-[260px] agar terlihat sebagian card kedua saat scroll
-      Tablet+: w-full mengisi grid cell, max-w membatasi agar tidak terlalu besar
-      aspect-[29/19] memastikan proporsional di semua ukuran, tidak gepeng
-    */
     <div
       onClick={() => setIsFlipped(!isFlipped)}
       className="w-full min-w-[260px] tablet:min-w-0 max-w-[415px] aspect-[29/19]
@@ -21,7 +16,7 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
           isFlipped ? "[transform:rotateY(180deg)]" : ""
         }`}
       >
-        {/* ===== FRONT CARD ===== */}
+        {/* FRONT CARD */}
         <div
           className={`absolute inset-0 w-full h-full rounded-[15px] tablet:rounded-[15px] flex flex-col justify-between overflow-hidden text-left border [backface-visibility:hidden] ${
             isDark
@@ -29,16 +24,15 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
               : "bg-white border-[#DFEAF2] text-[#343C6A]"
           }`}
         >
-          {/* KEMBALIKAN flex-1: Biar dia elastis nge-fit di dalam frame kartu, gak ngedorong keluar */}
           <div className="p-4 tablet:p-6 pb-2 tablet:pb-4 flex flex-col justify-between flex-1">
             <div className="flex justify-between items-start">
               <div>
                 <p
-                  className={`text-[10px] tablet:text-[10px] font-normal ${isDark ? "text-white/70" : "text-[#718EBF]"}`}
+                  className={`text-[9px] tablet:text-[9px] font-normal ${isDark ? "text-white/70" : "text-[#718EBF]"}`}
                 >
                   Balance
                 </p>
-                <p className="text-[16px] tablet:text-[17px] desktop:text-[25px] font-semibold mt-0.5 font-sans">
+                <p className="text-[14px] tablet:text-[15px] desktop:text-[21px] font-semibold mt-0.5 font-sans">
                   {balance}
                 </p>
               </div>
@@ -58,24 +52,24 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
             <div className="flex gap-6 tablet:gap-12 desktop:gap-14">
               <div>
                 <p
-                  className={`text-[9px] tablet:text-[10px] desktop:text-[14px] font-normal uppercase tracking-wider ${isDark ? "text-white/70" : "text-[#718EBF]"}`}
+                  className={`text-[8px] tablet:text-[9px] desktop:text-[12px] font-normal uppercase tracking-wider ${isDark ? "text-white/70" : "text-[#718EBF]"}`}
                 >
                   Card Holder
                 </p>
                 <p
-                  className={`text-[12px] tablet:text-[13px] desktop:text-[18px] font-semibold mt-0.5 tablet:mt-1 ${isDark ? "text-white" : "text-[#343C6A]"}`}
+                  className={`text-[11px] tablet:text-[12px] desktop:text-[15px] font-semibold mt-0.5 tablet:mt-1 ${isDark ? "text-white" : "text-[#343C6A]"}`}
                 >
                   {cardHolder}
                 </p>
               </div>
               <div>
                 <p
-                  className={`text-[9px] tablet:text-[10px] desktop:text-[14px] font-normal uppercase tracking-wider ${isDark ? "text-white/70" : "text-[#718EBF]"}`}
+                  className={`text-[8px] tablet:text-[9px] desktop:text-[12px] font-normal uppercase tracking-wider ${isDark ? "text-white/70" : "text-[#718EBF]"}`}
                 >
                   Valid Thru
                 </p>
                 <p
-                  className={`text-[12px] tablet:text-[13px] desktop:text-[18px] font-semibold mt-0.5 tablet:mt-1 ${isDark ? "text-white" : "text-[#343C6A]"}`}
+                  className={`text-[11px] tablet:text-[12px] desktop:text-[15px] font-semibold mt-0.5 tablet:mt-1 ${isDark ? "text-white" : "text-[#343C6A]"}`}
                 >
                   {validThru}
                 </p>
@@ -83,8 +77,6 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
             </div>
           </div>
 
-          {/* JURUS FIX: Kita ganti jadi tablet:pt-3.5 tablet:pb-4.5 */}
-          {/* Padding atas dikurangi dikit, padding bawah dibuat pas biar dia naik dari lantai kartu */}
           <div
             className={`flex justify-between items-center px-4 tablet:px-6 py-2.5 tablet:pt-3.5 tablet:pb-4.5 ${
               isDark
@@ -93,12 +85,12 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
             }`}
           >
             <p
-              className={`text-[12px] tablet:text-[12px] desktop:text-[18px] font-medium tracking-wider font-sans ${isDark ? "text-white" : "text-[#343C6A]"}`}
+              className={`text-[11px] tablet:text-[11px] desktop:text-[15px] font-medium tracking-wider font-sans ${isDark ? "text-white" : "text-[#343C6A]"}`}
             >
               {cardNumber}
             </p>
             <div className="flex -space-x-3 tablet:-space-x-4 desktop:-space-x-5 items-center">
-              {/* Lingkaran Overlapping logo mastercard */}
+              {/* Mastercard circles */}
               <div
                 className={`w-[28px] h-[28px] tablet:w-[30px] tablet:h-[30px] desktop:w-[45px] desktop:h-[45px] rounded-full ${isDark ? "bg-white/50" : "bg-[#9199AF]/50"}`}
               />
@@ -108,7 +100,8 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
             </div>
           </div>
         </div>
-        {/* ===== BACK CARD ===== */}
+
+        {/* BACK CARD */}
         <div
           className={`absolute inset-0 w-full h-full rounded-[15px] tablet:rounded-[15px] flex flex-col justify-between py-4 tablet:py-6 text-left border [backface-visibility:hidden] [transform:rotateY(180deg)] ${
             isDark
@@ -119,7 +112,7 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
           <div className="w-full h-[30px] tablet:h-[50px] bg-[#1A1A1A] mt-2" />
           <div className="px-4 tablet:px-8 flex items-center gap-x-4">
             <div
-              className={`flex-1 h-[28px] tablet:h-[40px] rounded-[6px] tablet:rounded-[5px] flex items-center px-3 tablet:px-4 italic text-[10px] tablet:text-[10px] ${
+              className={`flex-1 h-[28px] tablet:h-[40px] rounded-[6px] tablet:rounded-[5px] flex items-center px-3 tablet:px-4 italic text-[9px] tablet:text-[9px] ${
                 isDark
                   ? "bg-white/20 text-white/70"
                   : "bg-[#F4F5F7] text-[#718EBF]"
@@ -127,11 +120,11 @@ function Cards({ balance, cardHolder, validThru, cardNumber, isDark }) {
             >
               Authorized Signature
             </div>
-            <div className="bg-[#1814F3] text-white h-[24px] tablet:h-[36px] px-3 tablet:px-4 flex items-center justify-center rounded-[6px] tablet:rounded-[8px] font-mono font-bold text-[12px] tablet:text-[15px] tracking-wider shadow-md">
+            <div className="bg-[#1814F3] text-white h-[24px] tablet:h-[36px] px-3 tablet:px-4 flex items-center justify-center rounded-[6px] tablet:rounded-[8px] font-mono font-bold text-[11px] tablet:text-[13px] tracking-wider shadow-md">
               952
             </div>
           </div>
-          <div className="px-4 tablet:px-8 flex justify-between items-center text-[9px] tablet:text-[11px] opacity-60">
+          <div className="px-4 tablet:px-8 flex justify-between items-center text-[8px] tablet:text-[10px] opacity-60">
             <span className={!isDark ? "text-[#718EBF]" : ""}>
               Premium Security Card
             </span>

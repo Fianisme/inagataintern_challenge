@@ -64,10 +64,7 @@ function RecentTransactions() {
   ];
 
   return (
-    // Bagian terluar box putih memakan tinggi penuh dari Dashboard (h-full)
-    // Berikan flex flex-col dan p-4 atau p-5 (sedikit dikurangi dari p-6 agar muat banyak di tablet)
     <div className="bg-white p-4 desktop:p-6 rounded-[25px] border border-[#DFEAF2] w-full h-full flex flex-col shadow-xs overflow-hidden">
-      {/* FIX UTAMA: Bungkus list transaksi dengan h-full dan overflow-y-auto */}
       <div className="space-y-[12px] desktop:space-y-[15px] overflow-y-auto pr-1 scrollbar-thin h-full">
         {transactions.map((item) => (
           <div
@@ -82,17 +79,17 @@ function RecentTransactions() {
                 {item.icon}
               </div>
               <div className="text-left">
-                <h4 className="font-semibold text-[14px] desktop:text-[15px] text-[#343C6A] line-clamp-1">
+                <h4 className="font-semibold text-[13px] desktop:text-[14px] text-[#343C6A] line-clamp-1">
                   {item.title}
                 </h4>
-                <p className="text-[11px] desktop:text-[12px] text-[#718EBF] mt-0.5">
+                <p className="text-[10px] desktop:text-[11px] text-[#718EBF] mt-0.5">
                   {item.date}
                 </p>
               </div>
             </div>
             {/* Right: Amount */}
             <span
-              className={`font-bold text-[14px] desktop:text-[16px] flex-shrink-0 ${item.amount < 0 ? "text-[#FF4B4A]" : "text-[#41D4A8]"}`}
+              className={`font-bold text-[13px] desktop:text-[14px] flex-shrink-0 ${item.amount < 0 ? "text-[#FF4B4A]" : "text-[#41D4A8]"}`}
             >
               {item.amount < 0
                 ? `-$${Math.abs(item.amount)}`

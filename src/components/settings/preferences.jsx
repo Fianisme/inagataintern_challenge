@@ -85,7 +85,7 @@ export default function Preferences() {
                       handleChange("currency", curr);
                       setIsOpenCurrency(false);
                     }}
-                    className={`px-5 py-3 text-[15px] cursor-pointer transition-colors ${
+                    className={`px-5 py-3 text-[13px] cursor-pointer transition-colors ${
                       preferences.currency === curr
                         ? "bg-[#1814F3]/10 text-[#1814F3] font-medium"
                         : "text-[#718EBF] hover:bg-[#F4F5F7] hover:text-[#343C6A]"
@@ -143,7 +143,7 @@ export default function Preferences() {
                       handleChange("timeZone", tz);
                       setIsOpenTimeZone(false);
                     }}
-                    className={`px-5 py-3 text-[15px] cursor-pointer transition-colors ${
+                    className={`px-5 py-3 text-[13px] cursor-pointer transition-colors ${
                       preferences.timeZone === tz
                         ? "bg-[#1814F3]/10 text-[#1814F3] font-medium"
                         : "text-[#718EBF] hover:bg-[#F4F5F7] hover:text-[#343C6A]"
@@ -233,7 +233,7 @@ export default function Preferences() {
       <div className="flex justify-end mt-4">
         <button
           type="submit"
-          className="w-full md:w-[190px] h-[50px] bg-[#1814F3] hover:bg-blue-800 text-white font-medium text-[16px] rounded-[15px] transition-colors shadow-sm cursor-pointer"
+          className="w-full md:w-[190px] h-[50px] bg-[#1814F3] hover:bg-blue-800 text-white font-medium text-[15px] rounded-[15px] transition-colors shadow-sm cursor-pointer"
         >
           Save
         </button>

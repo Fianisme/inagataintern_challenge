@@ -27,7 +27,7 @@ export default function Settings() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`pb-3 text-[14px] tablet:text-[16px] font-medium transition-colors duration-300
+              className={`pb-3 text-[13px] tablet:text-[14px] font-medium transition-colors duration-300
                           cursor-pointer relative whitespace-nowrap flex-shrink-0 ${
                 activeTab === tab.id
                   ? "text-[#1814F3] font-semibold"

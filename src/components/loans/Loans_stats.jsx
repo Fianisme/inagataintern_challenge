@@ -55,10 +55,10 @@ export default function LoansStats() {
           </div>
           {/* Text */}
           <div className="text-left min-w-0">
-            <p className="text-[#718EBF] text-[13px] tablet:text-[15px] font-sans font-medium truncate">
+            <p className="text-[#718EBF] text-[12px] tablet:text-[13px] font-sans font-medium truncate">
               {item.title}
             </p>
-            <p className="text-[#343C6A] text-[17px] tablet:text-[20px] font-semibold mt-1 font-sans">
+            <p className="text-[#343C6A] text-[15px] tablet:text-[17px] font-semibold mt-1 font-sans">
               {item.value}
             </p>
           </div>

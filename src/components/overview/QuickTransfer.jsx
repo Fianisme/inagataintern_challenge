@@ -47,10 +47,10 @@ export default function QuickTransfer() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-all duration-300"
                 />
               </div>
-              <h5 className="text-[12px] desktop:text-[15px] font-bold text-[#343C6A] text-center truncate w-full px-1">
+              <h5 className="text-[11px] desktop:text-[13px] font-bold text-[#343C6A] text-center truncate w-full px-1">
                 {user.name}
               </h5>
-              <p className="text-[10px] desktop:text-[12px] text-[#718EBF] mt-0.5 font-medium truncate w-full text-center">
+              <p className="text-[9px] desktop:text-[11px] text-[#718EBF] mt-0.5 font-medium truncate w-full text-center">
                 {user.role}
               </p>
             </div>
@@ -75,10 +75,9 @@ export default function QuickTransfer() {
         </button>
       </div>
 
-      {/* Write Amount row */}
-      {/* FIX UTAMA: Di mobile & tablet tetap flex-col (teks di atas form). Baru pas layar desktop melebar ganti ke desktop:flex-row */}
+      {/* Write Amount */}
       <div className="flex flex-col desktop:flex-row items-start desktop:items-center gap-2 tablet:gap-2.5 desktop:gap-4 mt-4 tablet:mt-2">
-        <span className="text-[13px] desktop:text-[15px] font-semibold text-[#718EBF] whitespace-nowrap">
+        <span className="text-[12px] desktop:text-[13px] font-semibold text-[#718EBF] whitespace-nowrap">
           Write Amount
         </span>
 
@@ -87,9 +86,9 @@ export default function QuickTransfer() {
             type="text"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
-            className="bg-transparent text-[#343C6A] font-bold text-[14px] desktop:text-[16px] pl-5 pr-[110px] desktop:pr-[130px] w-full h-full outline-none"
+            className="bg-transparent text-[#343C6A] font-bold text-[13px] desktop:text-[14px] pl-5 pr-[110px] desktop:pr-[130px] w-full h-full outline-none"
           />
-          <button className="absolute right-0 top-0 bottom-0 bg-[#1814F3] hover:bg-[#0F35BF] text-white px-5 desktop:px-7 rounded-full flex items-center justify-center gap-2 font-bold text-[14px] desktop:text-[16px] transition-all duration-200 shadow-md cursor-pointer h-full min-w-[100px] desktop:min-w-[120px]">
+          <button className="absolute right-0 top-0 bottom-0 bg-[#1814F3] hover:bg-[#0F35BF] text-white px-5 desktop:px-7 rounded-full flex items-center justify-center gap-2 font-bold text-[13px] desktop:text-[14px] transition-all duration-200 shadow-md cursor-pointer h-full min-w-[100px] desktop:min-w-[120px]">
             <span>Send</span>
             <svg
               className="w-4 h-4 desktop:w-5 desktop:h-5 transform rotate-[-20deg]"

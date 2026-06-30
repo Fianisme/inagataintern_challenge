@@ -7,10 +7,10 @@ function Header({ title = 'Overview', onMenuClick }) {
                        py-4 tablet:py-0 tablet:h-24
                        transition-all duration-300">
 
-      {/* Row utama: hamburger | title | avatar (mobile) / full layout (tablet+) */}
+      {/* Top row */}
       <div className="flex items-center justify-between w-full">
 
-        {/* Hamburger — hanya di bawah tablet */}
+        {/* Hamburger */}
         <button
           onClick={onMenuClick}
           className="tablet:hidden text-[#343C6A] hover:text-[#1814F3] transition-colors cursor-pointer mr-3"
@@ -21,12 +21,12 @@ function Header({ title = 'Overview', onMenuClick }) {
         </button>
 
         {/* Title */}
-        <h2 className="text-[18px] tablet:text-[28px] font-bold text-[#343C6A] font-sans
+        <h2 className="text-[16px] tablet:text-[24px] font-bold text-[#343C6A] font-sans
                        text-center tablet:text-left flex-1 tablet:flex-initial">
           {title}
         </h2>
 
-        {/* Desktop: search + action buttons + avatar */}
+        {/* Desktop actions */}
         <div className="hidden tablet:flex items-center gap-4 desktop:gap-6">
           {/* Search */}
           <div className="relative">
@@ -68,7 +68,7 @@ function Header({ title = 'Overview', onMenuClick }) {
           </div>
         </div>
 
-        {/* Mobile: avatar saja di kanan */}
+        {/* Mobile avatar */}
         <div className="tablet:hidden w-[34px] h-[34px] rounded-full overflow-hidden ml-3">
           <img
             src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100&h=100"
@@ -78,7 +78,7 @@ function Header({ title = 'Overview', onMenuClick }) {
         </div>
       </div>
 
-      {/* Row 2: search bar di mobile (di bawah title row) */}
+      {/* Mobile search */}
       <div className="relative mt-3 tablet:hidden w-full">
         <span className="absolute inset-y-0 left-0 flex items-center pl-4 text-[#8BA3CB]">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@ function Header({ title = 'Overview', onMenuClick }) {
         <input
           type="text"
           placeholder="Search for something"
-          className="bg-[#F5F7FA] text-[#343C6A] placeholder-[#8BA3CB] pl-10 pr-6 py-2.5 rounded-full text-[13px] outline-none w-full border border-transparent focus:border-[#1814F3]/20 transition-all font-medium"
+          className="bg-[#F5F7FA] text-[#343C6A] placeholder-[#8BA3CB] pl-10 pr-6 py-2.5 rounded-full text-[12px] outline-none w-full border border-transparent focus:border-[#1814F3]/20 transition-all font-medium"
         />
       </div>
     </header>

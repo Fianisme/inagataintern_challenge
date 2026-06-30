@@ -18,27 +18,27 @@ export default function LoansOverview() {
         <thead>
           <tr className="border-b border-[#E6EFF5]">
             {/* Mobile: hanya 3 kolom (Loan Money, Left to Repay, Repay) */}
-            <th className="pb-4 text-[#718EBF] font-semibold text-[13px] tablet:text-[15px] font-sans hidden tablet:table-cell">SL No</th>
-            <th className="pb-4 text-[#718EBF] font-semibold text-[13px] tablet:text-[15px] font-sans">Loan Money</th>
-            <th className="pb-4 text-[#718EBF] font-semibold text-[13px] tablet:text-[15px] font-sans">Left to repay</th>
-            <th className="pb-4 text-[#718EBF] font-semibold text-[13px] tablet:text-[15px] font-sans hidden tablet:table-cell">Duration</th>
-            <th className="pb-4 text-[#718EBF] font-semibold text-[13px] tablet:text-[15px] font-sans hidden tablet:table-cell">Interest rate</th>
-            <th className="pb-4 text-[#718EBF] font-semibold text-[13px] tablet:text-[15px] font-sans hidden tablet:table-cell">Installment</th>
-            <th className="pb-4 text-[#718EBF] font-semibold text-[13px] tablet:text-[15px] font-sans text-right">Repay</th>
+            <th className="pb-4 text-[#718EBF] font-semibold text-[12px] tablet:text-[13px] font-sans hidden tablet:table-cell">SL No</th>
+            <th className="pb-4 text-[#718EBF] font-semibold text-[12px] tablet:text-[13px] font-sans">Loan Money</th>
+            <th className="pb-4 text-[#718EBF] font-semibold text-[12px] tablet:text-[13px] font-sans">Left to repay</th>
+            <th className="pb-4 text-[#718EBF] font-semibold text-[12px] tablet:text-[13px] font-sans hidden tablet:table-cell">Duration</th>
+            <th className="pb-4 text-[#718EBF] font-semibold text-[12px] tablet:text-[13px] font-sans hidden tablet:table-cell">Interest rate</th>
+            <th className="pb-4 text-[#718EBF] font-semibold text-[12px] tablet:text-[13px] font-sans hidden tablet:table-cell">Installment</th>
+            <th className="pb-4 text-[#718EBF] font-semibold text-[12px] tablet:text-[13px] font-sans text-right">Repay</th>
           </tr>
         </thead>
         <tbody>
           {loanData.map((item) => (
             <tr key={item.id} className="border-b border-[#E6EFF5] hover:bg-[#F5F7FA]/30 transition-colors last:border-0">
-              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[13px] tablet:text-[15px] font-sans hidden tablet:table-cell">{item.id}</td>
-              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[13px] tablet:text-[15px] font-sans">{item.amount}</td>
-              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[13px] tablet:text-[15px] font-sans">{item.left}</td>
-              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[13px] tablet:text-[15px] font-sans hidden tablet:table-cell">{item.duration}</td>
-              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[13px] tablet:text-[15px] font-sans hidden tablet:table-cell">{item.rate}</td>
-              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[13px] tablet:text-[15px] font-sans hidden tablet:table-cell">{item.installment}</td>
+              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[12px] tablet:text-[13px] font-sans hidden tablet:table-cell">{item.id}</td>
+              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[12px] tablet:text-[13px] font-sans">{item.amount}</td>
+              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[12px] tablet:text-[13px] font-sans">{item.left}</td>
+              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[12px] tablet:text-[13px] font-sans hidden tablet:table-cell">{item.duration}</td>
+              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[12px] tablet:text-[13px] font-sans hidden tablet:table-cell">{item.rate}</td>
+              <td className="py-4 tablet:py-5 text-[#343C6A] font-medium text-[12px] tablet:text-[13px] font-sans hidden tablet:table-cell">{item.installment}</td>
               <td className="py-4 tablet:py-5 text-right">
                 <button
-                  className={`px-4 tablet:px-6 py-1.5 rounded-full border text-[12px] tablet:text-[14px] font-medium transition-all duration-200 cursor-pointer ${
+                  className={`px-4 tablet:px-6 py-1.5 rounded-full border text-[11px] tablet:text-[13px] font-medium transition-all duration-200 cursor-pointer ${
                     item.isActive
                       ? 'border-[#1814F3] text-[#1814F3] hover:bg-[#1814F3] hover:text-white'
                       : 'border-[#343C6A] text-[#343C6A] hover:border-[#1814F3] hover:text-[#1814F3]'
@@ -51,14 +51,14 @@ export default function LoansOverview() {
           ))}
           {/* Total row */}
           <tr className="font-bold text-[#FE5C73]">
-            <td className="py-5 text-[15px] font-sans hidden tablet:table-cell">Total</td>
-            <td className="py-5 text-[13px] tablet:text-[15px] font-sans">
+            <td className="py-5 text-[13px] font-sans hidden tablet:table-cell">Total</td>
+            <td className="py-5 text-[12px] tablet:text-[13px] font-sans">
               <span className="tablet:hidden">Total: </span>$125,0000
             </td>
-            <td className="py-5 text-[13px] tablet:text-[15px] font-sans">$750,000</td>
+            <td className="py-5 text-[12px] tablet:text-[13px] font-sans">$750,000</td>
             <td className="py-5 hidden tablet:table-cell" />
             <td className="py-5 hidden tablet:table-cell" />
-            <td className="py-5 text-[15px] font-sans hidden tablet:table-cell">$50,000 / month</td>
+            <td className="py-5 text-[13px] font-sans hidden tablet:table-cell">$50,000 / month</td>
             <td className="py-5 text-right" />
           </tr>
         </tbody>

@@ -24,34 +24,5 @@ Belum Kelar
 
 ---
 
-## Cara Menjalankan Proyek di Lokal
-
-Jika Anda ingin mereview atau menjalankan proyek ini di perangkat lokal Anda, ikuti langkah mudah berikut:
-
-1. **Clone Repositori Ini**
-   ```bash
-   git clone [https://github.com/Fianisme/inagataintern_challenge.git](https://github.com/Fianisme/inagataintern_challenge.git)
-   cd inagataintern_challenge
-
-2. **Install Dependensi**
-    ```bash
-    npm install
-
-3. **Jalankan**
-    ```bash
-    npm run dev
-
-## Struktur Project
-
-├── public/             # Aset publik (ikon, svg, dll.)
-├── src/
-│   ├── assets/         # Gambar & styling dasar
-│   ├── components/     # Komponen modular dashboard (Header, Sidebar, Cards, dll.)
-│   ├── views/          # Halaman utama (Dashboard.jsx)
-│   ├── App.jsx         # Root component
-│   └── main.jsx        # Entry point aplikasi
-├── .gitignore          # Penyaring file build lokal
-├── vite.config.js      # Konfigurasi Vite
-└── package.json        # Daftar modul & script proyek
 
 

@@ -4,9 +4,7 @@ export default function ExpenseStatistics() {
   /* Pie Chart */
 
   return (
-    // FIX DI SINI: h-[322px] diganti jadi h-full w-full agar manut ukuran Dashboard
     <div className="bg-white p-6 rounded-[25px] border border-[#DFEAF2] w-full h-full flex items-center justify-center shadow-xs">
-      {/* Biar SVG Pie Chart-nya responsif gak kebesaran di HP, kita kasih max-w & max-h */}
       <svg
         className="w-full h-full max-w-[250px] max-h-[250px]"
         viewBox="0 0 250 250"

@@ -118,7 +118,7 @@ function Sidebar({
 
                 {/* Label Menu */}
                 <span
-                  className={`text-[15px] tracking-wide ${isActive ? "font-bold" : "font-medium group-hover:font-semibold"}`}
+                  className={`text-[14px] tracking-wide ${isActive ? "font-bold" : "font-medium group-hover:font-semibold"}`}
                 >
                   {item.name}
                 </span>

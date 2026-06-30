@@ -64,24 +64,24 @@ export default function EditProfile() {
             { label: 'Country',           field: 'country',          type: 'text'     },
           ].map(({ label, field, type }) => (
             <div key={field} className="flex flex-col gap-y-2">
-              <label className="text-[13px] tablet:text-[15px] font-normal text-[#343C6A]">{label}</label>
+              <label className="text-[12px] tablet:text-[13px] font-normal text-[#343C6A]">{label}</label>
               <input
                 type={type}
                 value={formData[field]}
                 onChange={(e) => handleChange(field, e.target.value)}
-                className="w-full h-[46px] tablet:h-[50px] border border-[#DFEAF2] rounded-[15px] px-4 tablet:px-5 text-[#718EBF] text-[14px] tablet:text-[15px] focus:outline-none focus:border-[#1814F3]"
+                className="w-full h-[46px] tablet:h-[50px] border border-[#DFEAF2] rounded-[15px] px-4 tablet:px-5 text-[#718EBF] text-[13px] tablet:text-[14px] focus:outline-none focus:border-[#1814F3]"
               />
             </div>
           ))}
 
           {/* Date of Birth — select khusus */}
           <div className="flex flex-col gap-y-2">
-            <label className="text-[13px] tablet:text-[15px] font-normal text-[#343C6A]">Date of Birth</label>
+            <label className="text-[12px] tablet:text-[13px] font-normal text-[#343C6A]">Date of Birth</label>
             <div className="relative">
               <select
                 value={formData.dob}
                 onChange={(e) => handleChange('dob', e.target.value)}
-                className="w-full h-[46px] tablet:h-[50px] border border-[#DFEAF2] rounded-[15px] px-4 tablet:px-5 text-[#718EBF] text-[14px] tablet:text-[15px] appearance-none bg-white focus:outline-none focus:border-[#1814F3]"
+                className="w-full h-[46px] tablet:h-[50px] border border-[#DFEAF2] rounded-[15px] px-4 tablet:px-5 text-[#718EBF] text-[13px] tablet:text-[14px] appearance-none bg-white focus:outline-none focus:border-[#1814F3]"
               >
                 <option value="25 January 1990">25 January 1990</option>
                 <option value="01 January 2000">01 January 2000</option>
@@ -98,7 +98,7 @@ export default function EditProfile() {
           <div className="tablet:col-span-2 flex justify-end mt-2 tablet:mt-4">
             <button
               type="submit"
-              className="w-full tablet:w-[190px] h-[46px] tablet:h-[50px] bg-[#1814F3] hover:bg-blue-800 text-white font-medium text-[15px] tablet:text-[16px] rounded-[15px] transition-colors shadow-sm cursor-pointer"
+              className="w-full tablet:w-[190px] h-[46px] tablet:h-[50px] bg-[#1814F3] hover:bg-blue-800 text-white font-medium text-[14px] tablet:text-[15px] rounded-[15px] transition-colors shadow-sm cursor-pointer"
             >
               Save
             </button>

@@ -9,10 +9,10 @@ import BalanceHistory from "../components/overview/BalanceHistory";
 export default function Dashboard() {
   return (
     <div className="py-6 px-4 tablet:py-8 tablet:px-6 desktop:px-8 max-w-[1440px] mx-auto overflow-hidden">
-      {/* SATU GRID UTAMA UNTUK SEMUA KOMPONEN */}
       <div className="grid grid-cols-1 tablet:grid-cols-12 gap-x-6 tablet:gap-x-8 gap-y-6 tablet:gap-y-[32px]">
-        {/* ================= ROW 1 (Dashboard.jsx) ================= */}
-        {/* Left: My Cards */}
+
+        {/* ===== ROW 1 ===== */}
+        {/* My Cards */}
         <div className="tablet:col-span-8 space-y-3 tablet:space-y-4">
           <div className="flex justify-between items-center">
             <h3 className="text-[18px] tablet:text-[22px] font-bold text-[#343C6A]">
@@ -22,7 +22,6 @@ export default function Dashboard() {
               See All
             </button>
           </div>
-          {/* Tambahkan id atau penanda flex agar layouting di kanan bisa mendeteksi tinggi aslinya */}
           <div className="flex gap-5 tablet:gap-[30px] overflow-x-auto pb-2 scrollbar-none">
             <div className="min-w-[265px] tablet:min-w-[283px] desktop:flex-1">
               <Cards
@@ -45,26 +44,18 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Right: Recent Transaction */}
-        {/* JURUS PERFECT ALIGNMENT: Tambahkan flex flex-col khusus untuk tablet ke atas */}
+        {/* Recent Transaction */}
         <div className="tablet:col-span-4 space-y-3 tablet:space-y-4 flex flex-col">
           <h3 className="text-[18px] tablet:text-[22px] font-bold text-[#343C6A]">
             Recent Transaction
           </h3>
-
-          {/* SOLUSI ABSOLUT:
-            - Di mobile, biarkan dia fleksibel memakai min-h-[230px] atau bawaan aslinya.
-            - Di tablet & desktop, hilangkan tinggi statis (h-[]). Gunakan flex-1 dibarengi h-0.
-              Ini memaksa box putih RecentTransactions memotong bumbunya sendiri dan 
-              lurus mutlak mengikuti tinggi sejajar dengan Card di sebelah kirinya!
-          */}
           <div className="w-full min-h-[230px] tablet:min-h-0 tablet:flex-1 tablet:h-0">
             <RecentTransactions />
           </div>
         </div>
 
-        {/* ================= ROW 2 ================= */}
-        {/* Left: Weekly Activity */}
+        {/* ===== ROW 2 ===== */}
+        {/* Weekly Activity */}
         <div className="tablet:col-span-8 space-y-3 tablet:space-y-4">
           <h3 className="text-[18px] tablet:text-[22px] font-bold text-[#343C6A]">
             Weekly Activity
@@ -74,7 +65,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Right: Expense Statistics */}
+        {/* Expense Statistics */}
         <div className="tablet:col-span-4 space-y-3 tablet:space-y-4">
           <h3 className="text-[18px] tablet:text-[22px] font-bold text-[#343C6A]">
             Expense Statistics
@@ -84,8 +75,8 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* ================= ROW 3 ================= */}
-        {/* Left: Quick Transfer */}
+        {/* ===== ROW 3 ===== */}
+        {/* Quick Transfer */}
         <div className="tablet:col-span-5 space-y-3 tablet:space-y-4">
           <h3 className="text-[18px] tablet:text-[22px] font-bold text-[#343C6A]">
             Quick Transfer
@@ -95,7 +86,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Right: Balance History */}
+        {/* Balance History */}
         <div className="tablet:col-span-7 space-y-3 tablet:space-y-4">
           <h3 className="text-[18px] tablet:text-[22px] font-bold text-[#343C6A]">
             Balance History
@@ -104,6 +95,7 @@ export default function Dashboard() {
             <BalanceHistory />
           </div>
         </div>
+
       </div>
     </div>
   );
