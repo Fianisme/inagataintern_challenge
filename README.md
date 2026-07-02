@@ -1,6 +1,6 @@
-# Inagata Intern Challenge - Frontend Dashboard
+# Personal Credit Card Dashboard for Finance Apps
 
-Halo! 👋 Selamat datang di repositori proyek tantangan magang saya untuk posisi **Frontend Developer** di **Inagata**. Proyek ini berfokus pada slicing dan implementasi *dashboard* interaktif yang responsif, modular, dan bersih menggunakan ekosistem React modern.
+A modern and responsive frontend dashboard designed for managing credit card activities, financial tracking, and user analytics.
 
 ---
 
